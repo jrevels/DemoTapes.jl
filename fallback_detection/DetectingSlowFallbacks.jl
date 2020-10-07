@@ -34,4 +34,4 @@ Cassette.recurse(GenericLogCtx(), function()
 end)
 
 # this does
-Cassette.recurse(GenericLogCtx(), mul!, Float32[1.0 2; 3 4], @view(Float32[1.0 2; 3 4][[1 1;4 2]]), Float32[1.0 2; 3 4], 1.0, 1.0)
+Cassette.recurse(GenericLogCtx(), mul!, Float32[1.0 2; 3 4], @view(Float32[1.0 2; 3 4][[1 1; 4 2]]), Float32[1.0 2; 3 4], 1.0, 1.0)
