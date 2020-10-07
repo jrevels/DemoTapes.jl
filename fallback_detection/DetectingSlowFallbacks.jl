@@ -22,11 +22,7 @@ function Cassette.prehook(
         typeof(LinearAlgebra.generic_matmatmul!),
         typeof(LinearAlgebra.generic_matvecmul!),
         typeof(LinearAlgebra.generic_mul!),
-        typeof(LinearAlgebra.generic_norm1),
-        typeof(LinearAlgebra.generic_norm2),
-        typeof(LinearAlgebra.generic_normInf),
-        typeof(LinearAlgebra.generic_normMinusInf),
-        typeof(LinearAlgebra.generic_normp),
+        ),
     },
     args...
     )
@@ -40,5 +36,4 @@ end)
 
 # this does
 Cassette.recurse(GenericLogCtx(), mul!, Float32[1.0 2; 3 4], @view(Float32[1.0 2; 3 4][[1 1;4 2]]), Float32[1.0 2; 3 4], 1.0, 1.0)
-
 
